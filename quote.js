@@ -85,7 +85,7 @@ function calculateLoadAndInverter() {
 
   // Update maxLoadElement and suggestedInverterElement based on the calculations
   const suggestedInverter = compareTotalLoadWithInverterMaxLoad();
-  maxLoadElement.innerText = `${totalLoad}`;
+  maxLoadElement.innerText = `${totalLoad} Watts`;
   suggestedInverterElement.innerText = `${suggestedInverter}`;
   inverterPriceElement.innerText = `N${inverterDetails[suggestedInverter].price}`;
 
