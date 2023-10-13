@@ -57,33 +57,16 @@ function calculateLoadAndInverter() {
     },
   };
 
-  // Get the inverter size from the user
-  const inverterSize = document.getElementById("inverterSize").value;
-
-  // If the user has not selected an inverter size, show an error message
-  if (inverterSize === "") {
-    document.getElementById("inverterSizeError").classList.remove("hidden");
-    return;
-  } else {
-    document.getElementById("inverterSizeError").classList.add("hidden");
-  }
-
   let totalLoad = 0; // The total load in watts
 
   function compareTotalLoadWithInverterMaxLoad() {
-    // Compares the total load with the inverter max loads to suggest an appropriate
-    if (totalLoad <= 750) {
-      return "0.9kva";
-    } else if (totalLoad <= 800) {
-      return "1.0kva";
-    } else if (totalLoad <= 1200) {
-      return "1.5kva";
-    } else if (totalLoad <= 2000) {
-      return "2.3kva";
-    } else if (totalLoad <= 3000) {
-      return "3.5kva";
-    } else if (totalLoad > 3000) {
-      return "Exceeds our inverter capacity";
+    // Compares the total load with the inverter max loads to suggest an appropriate inverter
+    let suggestedInverter = "";
+    for (const inverter in inverterDetails) {
+      if (totalLoad <= inverterDetails[inverter].maxLoad) {
+        suggestedInverter = inverter;
+        return suggestedInverter;
+      }
     }
   }
 
