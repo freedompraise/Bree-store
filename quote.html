@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mx-auto p-4">
+      <h1 class="text-2xl font-bold mb-4">Solar Inverter Predictor</h1>
+
+      <form id="applianceForm" class="mb-4 bg-gray-500">
+        <div class="mb-2 flex">
+          <label for="tv">TV:</label>
+          <input
+            type="number"
+            id="tv"
+            class="ml-2"
+            min="0"
+            value="0"
+            placeholder="Or specify quantity"
+          />
+        </div>
+
+        <div class="mb-2 flex">
+          <label for="cableDecoder">Cable Decoder:</label>
+          <input
+            type="number"
+            id="cableDecoder"
+            class="ml-2"
+            min="0"
+            value="0"
+            placeholder="Or specify quantity"
+          />
+        </div>
+
+        <div class="mb-2 flex">
+          <label for="ceilingFan">Ceiling Fan:</label>
+          <input
+            type="number"
+            id="ceilingFan"
+            class="ml-2"
+            min="0"
+            value="0"
+            placeholder="Or specify quantity"
+          />
+        </div>
+        <div class="mb-2 flex">
+          <label for="lightBulb">Light Bulb:</label>
+          <input
+            type="number"
+            id="lightBulb"
+            class="ml-2"
+            min="0"
+            value="0"
+            placeholder="Or specify quantity"
+          />
+        </div>
+        <div class="mb-2 flex">
+          <label for="standingFan">Standing Fan:</label>
+          <input
+            type="number"
+            id="standingFan"
+            class="ml-2"
+            min="0"
+            value="0"
+            placeholder="Or specify quantity"
+          />
+        </div>
+        <div class="mb-2 flex">
+          <label for="waterPump">Water Pump</label>
+          <input
+            type="number"
+            id="waterPump"
+            class="ml-2"
+            min="0"
+            value="0"
+            placeholder="Or specify quantity"
+          />
+        </div>
+        <div class="mb-2 flex">
+          <label for="freezer">Freezer:</label>
+          <input
+            type="number"
+            id="freezer"
+            class="ml-2"
+            min="0"
+            value="0"
+            placeholder="Or specify quantity"
+          />
+        </div>
+        <div class="mb-2 flex">
+          <label for="refrigerator">Refrigerator</label>
+          <input
+            type="number"
+            id="refrigerator"
+            class="ml-2"
+            min="0"
+            value="0"
+            placeholder="Or specify quantity"
+          />
+        </div>
+        <div class="mb-2 flex">
+          <label for="inverterAC">Inverter AC</label>
+          <input
+            type="number"
+            id="inverterAC"
+            class="ml-2"
+            min="0"
+            value="0"
+            placeholder="Or specify quantity"
+          />
+        </div>
+        <div class="mb-2 flex">
+          <label for="mediumIndustrialFan">Medium Industrial Fan:</label>
+          <input
+            type="number"
+            id="mediumIndustrialFan"
+            class="ml-2"
+            min="0"
+            value="0"
+            placeholder="Or specify quantity"
+          />
+        </div>
+        <div class="mb-2 flex">
+          <label for="computerSet">Computer Set:</label>
+          <input
+            type="number"
+            id="computerSet"
+            class="ml-2"
+            min="0"
+            value="0"
+            placeholder="Or specify quantity"
+          />
+        </div>
+        <div class="mb-2 flex">
+          <label for="cctvCamera">CCTV Camera:</label>
+          <input
+            type="number"
+            id="cctvCamera"
+            class="ml-2"
+            min="0"
+            value="0"
+            placeholder="Or specify quantity"
+          />
+        </div>
+        <div class="mb-2 flex">
+          <label for="phoneCharger">Phone Charger:</label>
+          <input
+            type="number"
+            id="phoneCharger"
+            class="ml-2"
+            min="0"
+            value="0"
+            placeholder="Or specify quantity"
+          />
+        </div>
+        <div class="mb-2 flex">
+          <label for="washingMachine">Washing Machine:</label>
+          <input
+            type="number"
+            id="washingMachine"
+            class="ml-2"
+            min="0"
+            value="0"
+            placeholder="Or specify quantity"
+          />
+        </div>
+
+        <button
+          type="button"
+          onclick="calculateLoadAndInverter()"
+          class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"
+        >
+          Calculate
+        </button>
+      </form>
+
+      <div id="result" class="hidden mt-4">
+        <h2 class="font-bold mb-2">Result:</h2>
+        <p id="maxLoad"></p>
+        <p id="suggestedInverter"></p>
+      </div>
+    </div>
+
+    <script src="quote.js"></script>
+  </body>
+</html>
