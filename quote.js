@@ -18,6 +18,56 @@ function calculateLoadAndInverter() {
     washingMachine: 500,
   };
 
+  const inverterDetails = {
+    "0.9kva": {
+      maxLoad: 750,
+      price: "493,000",
+    },
+    "1.0kva": {
+      maxLoad: 800,
+      price: "420,200",
+    },
+    "2.3kva": {
+      maxLoad: 2000,
+      price: "1,272,400",
+    },
+    "3.5kva": {
+      maxLoad: 3000,
+      price: "1,433,900",
+    },
+    "5kva": {
+      maxload: 4500,
+      price: "2,132,100",
+    },
+    "7.5kva": {
+      maxLoad: 7000,
+      price: "2,882,100",
+    },
+    "10kva": {
+      maxLoad: 9500,
+      price: "5,453,300",
+    },
+    "15kva": {
+      maxLoad: 14500,
+      price: "7,459,500",
+    },
+    "20kva": {
+      maxLoad: 19500,
+      price: "11,578,600",
+    },
+  };
+
+  // Get the inverter size from the user
+  const inverterSize = document.getElementById("inverterSize").value;
+
+  // If the user has not selected an inverter size, show an error message
+  if (inverterSize === "") {
+    document.getElementById("inverterSizeError").classList.remove("hidden");
+    return;
+  } else {
+    document.getElementById("inverterSizeError").classList.add("hidden");
+  }
+
   let totalLoad = 0; // The total load in watts
 
   function compareTotalLoadWithInverterMaxLoad() {
