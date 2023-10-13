@@ -5,6 +5,8 @@
       rel="stylesheet"
       href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css"
     />
+    <link rel="icon" href="images/BREE_logo.png" type="image/png" />
+    <title>Blizz Renewable Energy Limited (BREE)</title>
   </head>
   <!--Nav-->
   <nav id="header" class="w-full z-30 top-0 py-1">
@@ -36,7 +38,7 @@
             <li>
               <a
                 class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
-                href="#store"
+                href="index.html#store"
                 >Shop</a
               >
             </li>
@@ -54,14 +56,17 @@
       <div class="order-1 md:order-2">
         <a
           class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl"
-          href="#"
+          href="index.html#store"
         >
           <img src="images/full_logo.png" />
         </a>
       </div>
 
       <div class="order-2 md:order-3 flex items-center" id="nav-content">
-        <a class="inline-block no-underline hover:text-black" href="#">
+        <a
+          class="inline-block no-underline hover:text-black"
+          href="index.html#store"
+        >
           <svg
             class="fill-current hover:text-black"
             xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +81,10 @@
           </svg>
         </a>
 
-        <a class="pl-3 inline-block no-underline hover:text-black" href="#">
+        <a
+          class="pl-3 inline-block no-underline hover:text-black"
+          href="index.html#store"
+        >
           <svg
             class="fill-current hover:text-black"
             xmlns="http://www.w3.org/2000/svg"
@@ -98,6 +106,21 @@
     class="bg-gray-100 flex flex-col items-center justify-center min-h-screen"
   >
     <section class="w-full max-w-md p-6 bg-white rounded-lg shadow-lg">
+      <div class="text-black p-6">
+        <div class="max-w-4xl mx-auto text-center">
+          <h3 class="text-2xl font-bold mb-2">
+            Welcome to Solar Inverter Predictor
+          </h3>
+          <p class="text-lg mb-4">
+            Use this tool to calculate the solar inverter specifications you
+            need based on the appliances you have.
+          </p>
+          <p class="text-lg">
+            Enter the quantity of each appliance you have, and we'll help you
+            determine the maximum load and the suggested inverter.
+          </p>
+        </div>
+      </div>
       <form id="applianceForm">
         <h1 class="text-2xl font-bold mb-4 text-center">List of Appliances</h1>
         <div class="grid grid-cols-3 gap-4">
