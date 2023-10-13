@@ -81,11 +81,13 @@ function calculateLoadAndInverter() {
   // Display the results in the "result" div
   const maxLoadElement = document.getElementById("maxLoad");
   const suggestedInverterElement = document.getElementById("suggestedInverter");
+  const inverterPriceElement = document.getElementById("inverterPrice");
 
   // Update maxLoadElement and suggestedInverterElement based on the calculations
   const suggestedInverter = compareTotalLoadWithInverterMaxLoad();
-  maxLoadElement.innerText = `Maximum Load: ${totalLoad}`;
-  suggestedInverterElement.innerText = `Suggested Inverter: ${suggestedInverter}`;
+  maxLoadElement.innerText = `${totalLoad}`;
+  suggestedInverterElement.innerText = `${suggestedInverter}`;
+  inverterPriceElement.innerText = `N${inverterDetails[suggestedInverter].price}`;
 
   // Show the result
   document.getElementById("result").classList.remove("hidden");
