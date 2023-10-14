@@ -89,6 +89,8 @@ function calculateLoadAndInverter() {
   suggestedInverterElement.innerText = `${suggestedInverter}`;
   inverterPriceElement.innerText = `N${inverterDetails[suggestedInverter].price}`;
 
-  // Show the result
-  document.getElementById("result").classList.remove("hidden");
+  // Show and scroll into result
+  const resultElement = document.getElementById("result");
+  resultElement.classList.remove("hidden");
+  resultElement.scrollIntoView({ behavior: "smooth" });
 }
