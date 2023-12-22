@@ -8,7 +8,7 @@
     <title>Blizz Renewable Energy Limited (BREE)</title>
     <meta name="description" content="Official Site of Bree Ltd">
     <meta name="keywords" content="tailwind,tailwindcss,tailwind css,css,shopping template,solar energy template,store template, shop layout, minimal, monochrome, minimalistic, theme, nordic">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-mua0yFzAahrQ8MhXFT7MS6gAn1fHPjzi4qFttVVCd6A//P1KbSS1K6jZWKyauz6VU13OpBRgZVUrpa2EIACLGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="/style.css">
     <link rel="icon" href="images/BREE_logo.png" type="image/png">
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
@@ -134,9 +134,8 @@
             </nav>
           </section>
 
-          <section>
-            <div class="product-container bg-gray-200 grid grid-cols-2 gap-2 justify-items-center flex items-center justify-center min-h-screen py-8">
-
+          <section  id="product-list">
+            <div class="product-container bg-gray-200 grid grid-cols-2 sm:grid-cols-3 gap-2 justify-items-center flex items-center justify-center py-8">
 
                 <div class="product bg-white p-4 rounded-md shadow-md">
                     <img src="images/CCTV.jpg" alt="CCTV Camera" class="w-full h-48 object-cover mb-4">
@@ -289,9 +288,9 @@
                 </div>
             </section>
 
-            <section class="container mx-auto py-12">
+            <section class="quotation-container container mx-auto py-12" id="quotation">
               <div class="text-center">
-                <img src="images/Quotation.jpg" alt="Power Your House with Solar" class="mx-auto mb-2" style="max-width: 50%;">
+                <img src="images/Quotation.jpg" alt="Power Your House with Solar" class="quotation-image mx-auto mb-2" style="max-width: 50%;">
                 <h2 class="text-2xl font-bold mb-4">Discover the Power of Solar Energy</h2>
                 <p>Get a free solar installation quotation tailored for your home.</p>
                 <a href="quote.html" class="mt-4 inline-block px-6 py-3 bg-green-500 text-white font-bold rounded-lg hover:bg-green-600">Get Your Quotation</a>
@@ -301,9 +300,8 @@
             
             
             
-            <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
-              <div class="container flex flex-wrap">
-                <div class="w-full lg:w-1/2 px-3 md:px-0">
+            <footer class="container mx-auto bg-white py-8 border-t border-gray-400  px-3 sm:px-6 flex sm:flex-wrap flex-col">
+                <div class="w-full">
                   <h1 class="font-bold text-gray-900">Flexible Payment Options Available!</h1>
                   <p class="py-4">
                     Shop with ease and flexibility! We offer convenient installment payment options to suit your budget. Interested in learning more about our installment plans? Message us on WhatsApp at
@@ -312,7 +310,7 @@
                   </p>
                   
                 </div>
-                <div class="w-full lg:w-1/2 lg:justify-end lg:text-right mt-6 md:mt-0 px-3 md:px-0">
+                <div class="w-full mt-6 md:mt-0">
                   <h3 class="text-left font-bold text-gray-900">About</h3>
                   <p class="py-4">
                     Blizz Renewable Energy Limited is one of the largest solar companies in Nigeria. We believe solar energy is the future of power distribution in the world and our vision is to create carbon-free cities by accelerating clean and renewable energy solutions in every home. BREE will bring renewable energy to your doorstep.
@@ -334,7 +332,6 @@
                     </a>
                   </div>
                 </div>
-              </div>
             </footer>            
 
 
