@@ -59,32 +59,22 @@
     position: relative;
     display: inline-block;
     align-items: center;
-  }
-  
-  .quotation-image {
+    overflow: hidden; 
+}
+
+.quotation-image {
     width: 300px;
     height: auto;
     transition: transform 0.5s ease-in-out;
-  }
+}
 
-  .quotation-container:hover .quotation-image {
-    transform: scale(1.1); 
-  }
-  
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-  }
-
-  @keyframes lighting {
-    0% { opacity: 1; }
-    50% { opacity: 1.5; }
-    100% { opacity: 1; }
-  }
-  
-  .quotation-container:hover .quotation-image {
-    animation: pulse 2s infinite;
+.quotation-container:hover .quotation-image {
+    transform: scale(1.1);
     filter: brightness(1.2);
-  }
-  
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
