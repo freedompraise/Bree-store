@@ -122,11 +122,6 @@ let slideIndex = 1;
             showSlide(slideIndex += moveStep);
         }
 
-        // change slide with the dots
-        function currentSlide(n) {
-            showSlide(slideIndex = n);
-        }
-
         function showSlide(n) {
             let i;
             const slides = document.getElementsByClassName("slide");
@@ -140,17 +135,13 @@ let slideIndex = 1;
                 slides[i].classList.add('hidden');
             }
 
-            // remove active status from all dots
-            for (i = 0; i < dots.length; i++) {
-                dots[i].classList.remove('bg-yellow-500');
-                dots[i].classList.add('bg-green-600');
-            }
-
             slides[slideIndex - 1].classList.remove('hidden');
 
+            // slides[slideIndex - 1].style.transform = `translateX(${slideIndex -1 * -100}%)`;
         }
 
         setInterval(() => {
             moveSlide(1);
+
         }, 5000);
       

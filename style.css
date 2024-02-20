@@ -78,3 +78,26 @@
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.1); }
 }
+
+.slide-in-left {
+    animation: slide-in-left 0.5s forwards;
+}
+
+@keyframes slide-in-left {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.shop-btn:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+.shop-btn:active {
+    transform: scale(0.9);
+    transition: transform 0.3s;
+}
