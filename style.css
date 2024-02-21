@@ -68,7 +68,7 @@
     transition: transform 0.5s ease-in-out;
 }
 
-.quotation-container:hover .quotation-image .shop-btn {
+.quotation-container:hover .quotation-image {
     transform: scale(1.1);
     filter: brightness(1.2);
     animation: pulse 2s infinite;
@@ -77,4 +77,10 @@
 @keyframes pulse {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.1); }
+}
+
+.shop-btn {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+    animation: pulse 2s infinite;
 }
