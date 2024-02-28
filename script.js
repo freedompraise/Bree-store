@@ -1,4 +1,3 @@
-// Function to open the order form with the selected product name
 function openOrderForm(productName, productImageSrc) {
   document.getElementById("orderFormSection").style.display = "block";
   document.getElementById("selectedProduct").textContent = productName;
@@ -8,7 +7,7 @@ function openOrderForm(productName, productImageSrc) {
   orderFormSection.scrollIntoView({ behavior: "smooth" });
 }
 
-// Function to open the installmental plan form
+
 function scrollToInstallmentalPlan() {
   const installmentalPaymentSection = document.getElementById(
     "installmentalPaymentSection"
@@ -17,7 +16,7 @@ function scrollToInstallmentalPlan() {
   installmentalPaymentSection.scrollIntoView({ behavior: "smooth" });
 }
 
-// Function to open the product image popup
+
 function openProductImagePopup(imageSrc) {
   const popup = document.getElementById("productImagePopup");
   const image = document.getElementById("popupImage");
@@ -25,9 +24,11 @@ function openProductImagePopup(imageSrc) {
   popup.style.display = "block";
 }
 
+
 function closeProductImagePopup() {
   document.getElementById("productImagePopup").style.display = "none";
 }
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const orderButtons = document.querySelectorAll(".order-button");
@@ -64,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+
   // to open the product image popup when the order cover is clicked
   orderCovers.forEach(function (cover) {
     cover.addEventListener("click", function () {
@@ -72,10 +74,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+// capture order and send to whatsapp
   const orderForm = document.getElementById("orderForm");
   orderForm.addEventListener("submit", function (event) {
     event.preventDefault();
-
     // Retrieve form field values
     const productName = document.getElementById("selectedProduct").textContent;
     const name = document.getElementById("name").value;
@@ -89,59 +91,64 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Construct WhatsApp message
     const whatsappMessage = `Order Details:
-Product Name: ${productName}
-Name: ${name}
-Delivery Address: ${deliveryAddress}
-Nearest Bus Stop: ${nearestBusStop}
-City: ${city}
-State: ${state}
-Phone Number: ${phoneNumber}
-Phone Number 2: ${phoneNumber2}
-Quantity: ${quantity}`;
+      Product Name: ${productName}
+      Name: ${name}
+      Delivery Address: ${deliveryAddress}
+      Nearest Bus Stop: ${nearestBusStop}
+      City: ${city}
+      State: ${state}
+      Phone Number: ${phoneNumber}
+      Phone Number 2: ${phoneNumber2}
+      Quantity: ${quantity}`;
 
     // Encode the message for the URL
     const encodedMessage = encodeURIComponent(whatsappMessage);
-
     const whatsappNumber = "08120691079";
-
-    // Construct the WhatsApp URL
     const whatsappURL = `https://wa.me/${whatsappNumber}/?text=${encodedMessage}`;
-
-    // Replace 'whatsappnumber' with your actual WhatsApp number
     window.location.href = whatsappURL;
   });
-
-
 });
 
+
+// slides
 let slideIndex = 1;
-        showSlide(slideIndex);
+showSlide(slideIndex);
+// change slide with the prev/next button
+function moveSlide(moveStep) {
+  showSlide(slideIndex += moveStep);
+  }
 
-        // change slide with the prev/next button
-        function moveSlide(moveStep) {
-            showSlide(slideIndex += moveStep);
-        }
-
-        function showSlide(n) {
-            let i;
-            const slides = document.getElementsByClassName("slide");
-            const dots = document.getElementsByClassName('dot');
+function showSlide(n) {
+  let i;
+  const slides = document.getElementsByClassName("slide");
+  const dots = document.getElementsByClassName('dot');
             
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-
-            // hide all slides
-            for (i = 0; i < slides.length; i++) {
-                slides[i].classList.add('hidden');
-            }
-
-            slides[slideIndex - 1].classList.remove('hidden');
-
-            // slides[slideIndex - 1].style.transform = `translateX(${slideIndex -1 * -100}%)`;
+  if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+      // hide all slides
+      for (i = 0; i < slides.length; i++) {
+        slides[i].classList.add('hidden');
         }
+      slides[slideIndex - 1].classList.remove('hidden');
+      }
 
-        setInterval(() => {
-            moveSlide(1);
+    setInterval(() => {
+      moveSlide(1);
+      }, 5000);
 
-        }, 5000);
-      
+  
+var perPage = 5;
+var productList = document.getElementById('product-list');
+var items = Array.from(productList.children);
+var numPages = Math.ceil(items.length / perPage);
+
+function showPage(page) {
+  var start = (page - 1) * perPage;
+  var end = start + perPage;
+  // firt hide all items
+  items.forEach(item => item.style.display = 'none');
+  // show items f0r page
+  items.slice(start, end).forEach(item => item.style.display = 'block');
+}
+
+showPage(1);
