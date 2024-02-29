@@ -129,9 +129,22 @@ function showSlide(n) {
       for (i = 0; i < slides.length; i++) {
         slides[i].classList.add('hidden');
         }
-      slides[slideIndex - 1].classList.remove('hidden');
+         // remove the active class from all dots
+      for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove('active');
       }
+      
+      slides[slideIndex - 1].classList.remove('hidden');
+      dots[slideIndex - 1].classList.add('active');
+      
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          showSlide(index + 1);
+        });
+      });
 
-    setInterval(() => {
-      moveSlide(1);
-      }, 5000);
+    };
+
+   setInterval(() => {
+    moveSlide(1);
+    }, 5000);
