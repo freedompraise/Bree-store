@@ -151,4 +151,4 @@ function showPage(page) {
   items.slice(start, end).forEach(item => item.style.display = 'block');
 }
 
-showPage(1);
+// showPage(1);
