@@ -129,26 +129,22 @@ function showSlide(n) {
       for (i = 0; i < slides.length; i++) {
         slides[i].classList.add('hidden');
         }
-      slides[slideIndex - 1].classList.remove('hidden');
+         // remove the active class from all dots
+      for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove('active');
       }
+      
+      slides[slideIndex - 1].classList.remove('hidden');
+      dots[slideIndex - 1].classList.add('active');
+      
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          showSlide(index + 1);
+        });
+      });
 
-    setInterval(() => {
-      moveSlide(1);
-      }, 5000);
+    };
 
-  
-var perPage = 5;
-var productList = document.getElementById('product-list');
-var items = Array.from(productList.children);
-var numPages = Math.ceil(items.length / perPage);
-
-function showPage(page) {
-  var start = (page - 1) * perPage;
-  var end = start + perPage;
-  // firt hide all items
-  items.forEach(item => item.style.display = 'none');
-  // show items f0r page
-  items.slice(start, end).forEach(item => item.style.display = 'block');
-}
-
-// showPage(1);
+   setInterval(() => {
+    moveSlide(1);
+    }, 5000);
