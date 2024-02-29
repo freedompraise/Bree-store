@@ -135,13 +135,6 @@ function showSlide(n) {
       }
       
       slides[slideIndex - 1].classList.remove('hidden');
-      dots[slideIndex - 1].classList.add('active');
-      
-      dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-          showSlide(index + 1);
-        });
-      });
 
     };
 
