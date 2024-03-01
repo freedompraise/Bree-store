@@ -18,7 +18,7 @@
     <meta http-equiv="Cache-Control" content="max-age=304000, public">
 </head>
 
-<body class="bg-gray-100 text-gray-600 work-sans leading-normal text-base tracking-normal ">
+<body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal ">
 
     <!--Nav-->
     <nav id="header" class="w-full z-30 top-0 py-1">
@@ -50,12 +50,12 @@
 
             <div class="order-2 md:order-3 flex items-center" id="nav-content">
 
-                <a class="inline-block no-underline hover:text-black" href="https://wa.me/08120691079">
-                  <i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i>
-                </a>
+                <a href="https://instagram.com/bree.ltd" class="mx-2">
+                    <i class="fa fa-instagram fa-2x lg:fa-3x text-pink-600" aria-hidden="true"></i>
+                   </a>
 
                 <a class="pl-3 inline-block no-underline hover:text-black" href="https://facebook.com/breeltd">
-                  <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+                  <i class="fa fa-facebook text-blue-600 fa-2x" aria-hidden="true"></i>
 
                 </a>
 
@@ -125,12 +125,19 @@
                   </div>
               </div>
     
+                <!-- The previous button -->
+      <a class="absolute left-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
+      onclick="moveSlide(-1)">❮</a>
+
+  <!-- The next button -->
+  <a class="absolute right-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
+      onclick="moveSlide(1)">❯</a>
+      
           </div>
 
     <div class="container energy-solutions mx-auto text-black px-4 flex flex-wrap my-4">
         <h1 class="text-3xl text-center my-2 mx-auto">BREE Energy Solutions</h1>
-        <div class="energy-pictures w-full mb-2 lg:w-1/2 px-4 flex flex-col space-y-2">
-            <img src="images/Solar project in Zambia.jpg" alt="Solar Panel" class="w-full h-full object-cover" />
+        <div class="energy-pictures w-full mb-2 lg:w-1/2 flex flex-col space-y-2">
             <img src="images/solar-project.jpg" alt="Solar Panel" class="w-full h-full object-cover" />
         </div>
 
@@ -176,27 +183,37 @@
         <img src="images/Quotation_sd6cnk_psokdn.webp" alt="Power Your House with Solar" class="quotation-image mx-auto mb-2 w-full h-45">
         <h2 class="text-xl font-bold mb-4">Discover the Power of Solar Energy !</h2>
         <p>Get a free solar installation quotation tailored for your home.</p>
-        <p class="mt-4 inline-block px-6 py-3 bg-green-500 text-white font-bold rounded-lg hover:bg-green-600">Get Your Quotation</p>
+        <p class="mt-4 inline-block px-6 py-3 bg-blue-500 text-white font-bold rounded-lg hover:bg-green-600">Get Your Quotation!</p>
         </a>
       </div>
     </div>
 
-    <h2 class="text-3xl mb-4 mx-auto">Who we are</h2>
+    <h2 class="text-3xl mb-2 mx-auto">Who we are</h2>
     <p class="text-sm">
         Bree Ltd is a renewable energy company that provides clean and affordable energy solutions to homes, offices,
         and businesses. We believe that everyone should have access to clean and affordable energy, no matter where they
         are. Our mission is to provide clean and affordable energy to everyone, no matter where they are.
     </p>
 
+    
+    <div class="">
     <h2 class="text-3xl text-center justify-center my-4">Why Choose us as your Energy Partner to power your home, office, or business?</h2>
+
     <div class="flex flex-wrap">
         <div class="w-full lg:w-1/2 px-4">
-            <h3 class="text-2xl mb-2">Quality Products</h3>
-            <p class="text-sm">
+            <h3 class="text-2xl mb-2">Quality Products
+            <!-- <button id="toggleQuality">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </button> -->
+        </h3>
+        <div class="collapse show" id="collapseQuality">
+            <p class=" hi text-sm">
                 We only use the highest quality products in our installations. This means that you can be sure that your
                 system will be reliable and efficient.
             </p>
         </div>
+        </div>
+
         <div class="w-full lg:w-1/2 px-4">
             <h3 class="text-2xl my-2">Expert Installation</h3>
             <p class="text-sm">
@@ -219,6 +236,7 @@
             </p>
         </div>
     </div>
+    </div>
 
     <h3 class="text-3xl text-center my-4 mx-auto">BREE Manufaturing Center</h3>
     <div class="flex flex-col lg:flex-row space-y-4">
@@ -227,7 +245,9 @@
     </div>
     
 
-
+    <!-- <a href="https://api.whatsapp.com/send?phone=2348120691079&text=Hi.%20I%27m%20interested%20in%20getting%20____">
+        <i class="fa fa-whatsapp fa-4x text-green-600 fixed bottom-5 right-10"></i>
+        </a> -->
 
 
       </div>
