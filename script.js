@@ -135,6 +135,7 @@ function showSlide(n) {
       }
       
       slides[slideIndex - 1].classList.remove('hidden');
+      slides[slideIndex - 1].style.animation = 'slideRight 1s forwards';
 
     };
 
