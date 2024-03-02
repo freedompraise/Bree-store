@@ -47,18 +47,14 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("confirmationProductPrice").textContent =
         "Price: " + productPrice;
 
-      // Show the confirmation modal (popup)
       document.getElementById("confirmOrderModal").style.display = "flex";
-      // Hide the order form
       document.getElementById("orderFormSection").style.display = "none";
 
       // Add event listener for the "Confirm Order" button in the confirmation section
       document
         .getElementById("confirmOrderBtn")
         .addEventListener("click", function () {
-          // Hide the confirmation modal (popup)
           document.getElementById("confirmOrderModal").style.display = "none";
-          // Show the order form
           document.getElementById("orderFormSection").style.display = "block";
           openOrderForm(productName, productImageSrc);
         });
