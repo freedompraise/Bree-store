@@ -138,3 +138,19 @@ function showSlide(n) {
    setInterval(() => {
     moveSlide(1);
     }, 5000);
+
+
+  
+  // toggle visibility of paragraphs when clicking on Font Awesome icons
+  document.addEventListener('DOMContentLoaded', function() {
+    const icons = document.querySelectorAll('.fa-plus-circle');
+    
+    icons.forEach(icon => {
+        icon.addEventListener('click', function() {
+            const paragraph = this.parentElement.nextElementSibling;
+            paragraph.classList.toggle('hidden');
+            this.classList.toggle('fa-minus-circle');
+            
+        });
+    });
+});
