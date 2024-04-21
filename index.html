@@ -26,7 +26,6 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -319,47 +318,39 @@
     <!-- Footer Start -->
    
 
-    <footer class="container mx-auto py-8 border-t text-base border-gray-400 text-center px-3 sm:px-6 flex flex-col sm:flex-wrap text-white bg-black">
-             
-        <div class="nav w-full font-mono flex flex-col lg:w-1/2 px-4 items-center justify-center">
-             <a href="index.html">
-                Home 
-            </a> 
-            <a href="about.html">
-                About Us
+    <footer class="container mx-auto py-8 border-top text-center text-white bg-dark">
+        <div class="row">
+          <div class="col-md-6 d-flex flex-column mt-2 align-items-center justify-content-center">
+            <a href="index.html" class="text-white">Home</a>
+            <a href="about.html" class="text-white">About Us</a>
+            <a href="/" class="text-white">Contact Us</a>
+            <a href="quote.html" class="text-white">Get Quotation</a>
+          </div>
+          <div class="col-md-6 d-flex mx-30 justify-content-between mt-4">
+            <a href="https://api.whatsapp.com/send?phone=2348120691079&text=Hi.%20I%27m%20interested%20in%20getting%20____" class="mx-2 text-success">
+              <i class="fab fa-whatsapp fa-2x"></i>
             </a>
-            <a href="/" class="">Contact Us</a>
-            <a href="quote.html">
-                Get Quotation
-              </a>
-                
-                </div>
-                
-                  <div class="socials w-full lg:w-1/2 px-4 mt-4 items-center">
-                        <a href="https://api.whatsapp.com/send?phone=2348120691079&text=Hi.%20I%27m%20interested%20in%20getting%20____" class="mx-2">
-                        <i class="fa fa-whatsapp text-green-300 fa-2x lg:fa-3x" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://facebook.com/breeltd" class="mx-2">
-                          <i class="fa fa-facebook text-blue-400 fa-2x lg:fa-3x" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://instagram.com/bree.ltd" class="mx-2">
-                         <i class="fa fa-instagram fa-2x lg:fa-3x text-pink-300" aria-hidden="true"></i>
-                        </a>
-                      
-                      </div>
-                      <hr  class="mt-4 bg-neutral-900" />
-    
-                      <div class="contact w-full px-4 mt-4">                    
-                        <p class="text-sm">Phone: 08120691079</p>
-                        <p class="text-sm">Email: breeltd@gmail.com
-                        </p>
-                        <p class="text-sm">Address: 453 Ikwerre Road opp F.C.M Bank Rumuokuta, Port Harcourt, Rivers Nigeria </p>
-    
-                      </div>
-                      <p class="mt-4 font-sm font-serif"> 2024. Bree LTD. All rights reserved </p>
+            <a href="https://facebook.com/breeltd" class="mx-2 text-primary">
+              <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a href="https://instagram.com/bree.ltd" class="mx-2 text-danger">
+              <i class="fab fa-instagram fa-2x"></i>
+            </a>
+          </div>
+        </div>
+        <hr class="mt-4 bg-secondary">
+        <div class="row">
+          <div class="col-md-4 mt-2">
+            <p class="">Phone: 08120691079</p>
+            <p class="">Email: breeltd@gmail.com</p>
+            <p class="">Address: 453 Ikwerre Road opp F.C.M Bank Rumuokuta, Port Harcourt, Rivers Nigeria</p>
+          </div>
+        </div>
+        <p class="">2024. Bree LTD. All rights reserved</p>
+      </footer>
       
-    </footer> 
     <!-- Footer End -->
+
 
 
     <!-- Modal -->
@@ -397,7 +388,7 @@
 
     <!-- Scroll to Bottom -->
     <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
-    <i class="fa fa-2x fa-whatsapp text-green-500 bg-black fixed mr-4 mb-4">whatsapp</i>
+    <!-- <i class="fa fa-2x fa-whatsapp text-green-500 bg-black fixed mr-4 mb-4"></i> -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
