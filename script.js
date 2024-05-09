@@ -154,3 +154,20 @@ function showSlide(n) {
         });
     });
 });
+
+
+const contactForm = document.getElementById('contactForm');
+
+  contactForm.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent default form submission
+
+    const name = document.getElementById('name').value;
+    const number = document.getElementById('number').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+
+    // Construct the WhatsApp link with a pre-filled message (optional)
+    const whatsappLink = `https://wa.me/2348120691079?text=Name: ${name}%0APhone Number: ${number}%0ASubject: ${subject}%0AMessage: ${message}`;
+    window.location.href = whatsappLink;
+  }
+  );
