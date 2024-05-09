@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const quantity = document.getElementById("quantity").value;
 
     // Construct WhatsApp message
-    const whatsappMessage = `Order Details:
+    const orderMessage = `Order Details:
       Product Name: ${productName}
       Name: ${name}
       Delivery Address: ${deliveryAddress}
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
       Quantity: ${quantity}`;
 
     // Encode the message for the URL
-    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const encodedMessage = encodeURIComponent(orderMessage);
     const whatsappNumber = "08120691079";
     const whatsappURL = `https://wa.me/${whatsappNumber}/?text=${encodedMessage}`;
     window.location.href = whatsappURL;
@@ -157,17 +157,21 @@ function showSlide(n) {
 
 
 const contactForm = document.getElementById('contactForm');
-
   contactForm.addEventListener('submit', (event) => {
     event.preventDefault(); // Prevent default form submission
-
     const name = document.getElementById('name').value;
     const number = document.getElementById('number').value;
     const subject = document.getElementById('subject').value;
     const message = document.getElementById('message').value;
 
-    // Construct the WhatsApp link with a pre-filled message (optional)
-    const whatsappLink = `https://wa.me/2348120691079?text=Name: ${name}%0APhone Number: ${number}%0ASubject: ${subject}%0AMessage: ${message}`;
-    window.location.href = whatsappLink;
+    const contactMessage = `Contact Details:
+      Name: ${name}
+      Phone Number: ${number}
+      Subject: ${subject}
+      Message: ${message}`;
+
+      const encodedMessage = encodeURIComponent(contactMessage);
+      const whatsappURL = `https://wa.me/2348120691079/?text=${encodedMessage}`;
+      window.location.href = whatsappURL;
   }
   );
