@@ -81,7 +81,6 @@ function calculateLoadAndInverter() {
   // Display the results in the "result" div
   const maxLoadElement = document.getElementById("maxLoad");
   const suggestedInverterElement = document.getElementById("suggestedInverter");
-  const inverterPriceElement = document.getElementById("inverterPrice");
 
   // Update maxLoadElement and suggestedInverterElement based on the calculations
   const suggestedInverter = compareTotalLoadWithInverterMaxLoad();
