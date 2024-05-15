@@ -63,7 +63,7 @@
 
     <div class="container mx-auto text-xs lg:text-lg px-4 lg:px-8 py-6">  
 
-        <section class="about w-full flex flex-col lg:flex-row text-black">
+        <section class="w-full flex flex-col lg:flex-row text-black" id="about">
             <article class="mb-4 lg:mr-4" id="about-us">
                 <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center">About Us</h1>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -86,47 +86,40 @@
                 <img src="images/solar-project.jpg" alt="Manufacturing Center" class="w-full h-56 object-cover lg:object-contain rounded-lg" />
             </article>
         </section>        
-        <section id="team" class="text-black w-full my-4 space-y-2">
+        <section id="team" class="text-black w-full my-4 lg:my-8 space-y-2">
             <h2 class="w-full text-3xl font-bold leading-tight text-center">Our Team</h2>
-                <article class="w-full flex flex-col lg:flex-row items-center mb-8 p-4">
-                    <img src="images/Pastor_Bree_Elite Global.jpg" alt="CEO" class="w-full lg:max-w-md h-full rounded-lg mb-4 lg:mr-16" />
-                    <div class="w-full lg:ml-4 mr-0 lg:mr-16">
-                        <p class="font-mono text-2xl mt-4 lg:mt-0">Mr. Vwakpor Efuetanu</p>
+        
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <article class="bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+                    <img src="images/Pastor_Bree_Elite Global.jpg" alt="CEO" class="w-full h-auto" />
+                    <div class="p-4">
+                        <p class="font-mono text-xl">Mr. Vwakpor Efuetanu</p>
                         <p class="font-bold text-blue-600">CEO</p>
-                        <p class="mt-2">With a keen focus on efficiency and excellence, Vwakpor is dedicated to driving
-                            growth and innovation within the company. His unique blend of scientific expertise
-                            and business acumen sets him apart as a leader in the industry, positioning BREE
-                            LTD as a frontrunner in sustainable energy solutions.</p>
-                    </div>
-                </article>                
-                <article class="w-full flex flex-col lg:flex-row items-center mb-8 p-4">
-                    <img src="images/Mr Richard.jpg" alt="Manager" class="w-full h-full lg:max-w-md rounded-lg mb-4 lg:mr-16" />
-                    <div class="w-full lg:ml-4 mr-0 lg:mr-16">
-                    <p class="font-mono text-2xl mt-4">Mr. Richard Efuetanu</p>
-                    <p class="font-bold text-blue-600">Managing Director</p>
-                    <p class="mt-2">Richard Efuetanu, the Managing Director of BREE LTD,
-                        embodies the spirit of visionary leadership and strategic
-                        foresight. With a wealth of experience in the renewable energy
-                        sector, Richard has played a pivotal role in shaping the
-                        company's trajectory and guiding it towards sustainable
-                        growth.
-                        </p>
+                        <p class="mt-2 text-sm">With a keen focus on efficiency and excellence, Vwakpor is dedicated to driving growth and innovation within the company. His unique blend of scientific expertise and business acumen sets him apart as a leader in the industry, positioning BREE LTD as a frontrunner in sustainable energy solutions.</p>
                     </div>
                 </article>
-                <article class="w-full flex flex-col lg:flex-row items-center mb-8 p-4">
-                    <img src="images/Mrs Efuetanu.jpg" alt="Technician" class="w-full h-full lg:max-w-md object-fit rounded-lg mb-4 lg:mr-16" />
-                    <div class="w-full lg:ml-4 mr-0 lg:mr-16">
-                    <p class="font-mono text-2xl mt-4">Mrs. Favour Efuetanu</p>
-                    <p class="font-bold text-blue-600">Human Resource Manager</p>
-                    <p class="mt-2">Favour embodies a blend of quick-witted learning, logic,
-                        and empathy in her approach to HR management. Her
-                        ability to understand and navigate complex interpersonal
-                        dynamics enables her to effectively address challenges
-                        and foster a positive work environment within the
-                        organization.</p>
+        
+                <article class="bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+                    <img src="images/Mr Richard.jpg" alt="Managing Director" class="w-full h-auto" />
+                    <div class="p-4">
+                        <p class="font-mono text-xl">Mr. Richard Efuetanu</p>
+                        <p class="font-bold text-blue-600">Managing Director</p>
+                        <p class="mt-2 text-sm">Richard Efuetanu, the Managing Director of BREE LTD, embodies the spirit of visionary leadership and strategic foresight. With a wealth of experience in the renewable energy sector, Richard has played a pivotal role in shaping the company's trajectory and guiding it towards sustainable growth.</p>
                     </div>
                 </article>
-        </section>
+        
+                <article class="bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+                    <img src="images/Mrs Efuetanu.jpg" alt="Human Resource Manager" class="w-full h-auto lg:h-100" />
+                    <div class="p-4">
+                        <p class="font-mono text-xl">Mrs. Favour Efuetanu</p>
+                        <p class="font-bold text-blue-600">Human Resource Manager</p>
+                        <p class="mt-2 text-sm">Favour embodies a blend of quick-witted learning, logic, and empathy in her approach to HR management. Her ability to understand and navigate complex interpersonal dynamics enables her to effectively address challenges and foster a positive work environment within the organization.</p>
+                    </div>
+                </article>
+            </div>
+        </section>        
+        
+                      
         <section class="testimonials w-full flex flex-col text-black" id="testimonials">
             <h2 class="w-full my-2 text-3xl font-bold leading-tight text-center">Testimonials</h2>
             <div class="w-full flex flex-col lg:flex-row items-center">
