@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-  <title>Quote Generation|BREE</title>
+  <title>Quote Generation | BREE</title>
     <meta name="description" content="Generate solar energy quote for your home">
     <meta name="keywords" content="tailwind,tailwindcss,tailwind css,css,shopping template,solar energy template,store template, shop layout, minimal, monochrome, minimalistic, theme, nordic">
     <link rel="stylesheet" type="text/css" href="/style.css">
@@ -18,23 +18,13 @@
     <meta http-equiv="Cache-Control" content="max-age=304000, public">
 </head>
 
-  <body class="bg-gray-100">
-     <!--Nav-->
-     <nav id="header" class="w-full z-30 top-0 py-1">
-      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-3">
-
-          <div class="order-2 md:order-3 flex items-center" id="nav-content">
-              <a class="inline-block no-underline hover:text-black text-pink-600" href="https://wa.me/08120691079">
-                <i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i>
-              </a>
-              <a class="pl-3 inline-block no-underline hover:text-black text-blue-600" href="https://facebook.com/breeltd">
-                <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
-              </a>
-          </div>
-
-          <div class="order-1 md:order-2">
-              <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl " href="index.html">
-                  <img src="images/full_logo.webp" class="w-20 h-20 object-contain"  alt="Bree logo"/>
+<body class="bg-gray-100">
+  <!--Nav-->
+  <nav id="header" class="w-full z-30 top-0 py-1 bg-white shadow">
+      <div class="container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-3">
+          <div class="flex items-center order-1">
+              <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl" href="index.html">
+                  <img src="images/full_logo.webp" class="w-20 h-20 object-contain" alt="Bree logo"/>
               </a>
           </div>
 
@@ -44,287 +34,141 @@
                   <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
               </svg>
           </label>
-          
           <input class="hidden" type="checkbox" id="menu-toggle" />
-          <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
+          
+          <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-2" id="menu">
               <nav>
                   <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
-                      <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="index.html" >Home</a></li>
-                      <li><a class="inline-block no-underline hover:underline py-2 px-4" href="store.html">Shop</a></li>
-                      <li><a class="inline-block hover:text-black hover:underline py-2 px-4" href="about.html">About Us</a></li>
-                      <li><a class="inline-block underline hover:text-black hover:text-blue-600 hover:underline py-2 px-4" href="#" >Get Quotation</a> </li>
+                      <li><a class="inline-block no-underline hover:text-black py-2 px-4" href="index.html">Home</a></li>
+                      <li><a class="inline-block no-underline hover:text-black py-2 px-4" href="store.html">Shop</a></li>
+                      <li><a class="inline-block no-underline hover:text-black py-2 px-4" href="about.html">About Us</a></li>
+                      <li><a class="inline-block no-underline hover:text-black py-2 px-4 text-blue-600 underline" href="#">Get Quotation</a></li>
                   </ul>
               </nav>
+          </div>
+          
+          <div class="order-2 md:order-3 flex items-center" id="nav-content">
+              <a class="inline-block no-underline hover:text-black text-green-500" href="https://wa.me/08120691079">
+                  <i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i>
+              </a>
+              <a class="pl-3 inline-block no-underline hover:text-black text-blue-600" href="https://facebook.com/breeltd">
+                  <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+              </a>
           </div>
       </div>
   </nav>
 
-    <section class="container mx-auto text-xs lg:text-lg px-4 lg:px-8 py-6">
+  <section class="container mx-auto text-xs lg:text-lg px-4 lg:px-8 py-6">
       <div class="text-black p-6">
-        <div class="max-w-4xl mx-auto text-center">
-          <h3 class="text-2xl font-bold mb-2">
-            Welcome to Solar Inverter Predictor
-          </h3>
-          <p class="text-lg mb-4">
-            Use this tool to calculate the solar inverter specifications you
-            need based on the appliances you have.
-          </p>
-          <p class="text-lg">
-            Enter the quantity of each appliance you have, and we'll help you
-            determine the maximum load and the suggested inverter.
-          </p>
-        </div>
+          <div class="max-w-4xl mx-auto text-center">
+              <h3 class="text-3xl font-bold mb-4">Welcome to <p class="text-blue-600">Solar Inverter Predictor</p></h3>
+              <p class="text-lg mb-4">Use this tool to calculate the solar inverter specifications you need based on the appliances you have.</p>
+              <p class="text-lg mb-4">Enter the quantity of each appliance you have, and we'll help you determine the maximum load and the suggested inverter.</p>
+          </div>
       </div>
-      <form id="applianceForm">
-        <h1 class="text-2xl font-bold mb-4 text-center">
-          List of Appliances
-        </h1>
-        <div class="grid grid-cols-3 gap-4">
-          <div class="mb-4">
-            <label class="block text-gray-700 mb-2" for="tv"> TV:</label>
-            <input
-              type="number"
-              id="tv"
-              class="w-1/2 px-3 py-2 border rounded"
-              min="0"
-              value="0"
-              placeholder="Or specify quantity"
-            />
+      <form id="applianceForm" class="bg-white p-6 rounded-lg shadow-lg">
+          <h1 class="text-2xl font-bold mb-6 text-center">List of Appliances</h1>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              <div class="mb-4">
+                  <label class="block text-gray-700 mb-2" for="tv">TV:</label>
+                  <input type="number" id="tv" class="w-full px-3 py-2 border rounded" min="0" value="0" placeholder="Specify quantity" />
+              </div>
+              <div class="mb-4">
+                  <label class="block text-gray-700 mb-2" for="lightBulb">Light Bulb:</label>
+                  <input type="number" id="lightBulb" class="w-full px-3 py-2 border rounded" min="0" value="0" placeholder="Specify quantity" />
+              </div>
+              <div class="mb-4">
+                  <label class="block text-gray-700 mb-2" for="standingFan">Standing Fan:</label>
+                  <input type="number" id="standingFan" class="w-full px-3 py-2 border rounded" min="0" value="0" placeholder="Specify quantity" />
+              </div>
+              <div class="mb-4">
+                  <label class="block text-gray-700 mb-2" for="waterPump">Water Pump:</label
+                  <input type="number" id="waterPump" class="w-full px-3 py-2 border rounded" min="0" value="0" placeholder="Specify quantity" />
+              </div>
+              <div class="mb-4">
+                  <label class="block text-gray-700 mb-2" for="freezer">Freezer:</label>
+                  <input type="number" id="freezer" class="w-full px-3 py-2 border rounded" min="0" value="0" placeholder="Specify quantity" />
+              </div>
+              <div class="mb-4">
+                  <label class="block text-gray-700 mb-2" for="refrigerator">Refrigerator:</label>
+                  <input type="number" id="refrigerator" class="w-full px-3 py-2 border rounded" min="0" value="0" placeholder="Specify quantity" />
+              </div>
+              <div class="mb-4">
+                  <label class="block text-gray-700 mb-2" for="inverterAC">Inverter AC:</label>
+                  <input type="number" id="inverterAC" class="w-full px-3 py-2 border rounded" min="0" value="0" placeholder="Specify quantity" />
+              </div>
+              <div class="mb-4">
+                  <label class="block text-gray-700 mb-2" for="mediumIndustrialFan">Medium Industrial Fan:</label>
+                  <input type="number" id="mediumIndustrialFan" class="w-full px-3 py-2 border rounded" min="0" value="0" placeholder="Specify quantity" />
+              </div>
+              <div class="mb-4">
+                  <label class="block text-gray-700 mb-2" for="computerSet">Computer Set:</label>
+                  <input type="number" id="computerSet" class="w-full px-3 py-2 border rounded" min="0" value="0" placeholder="Specify quantity" />
+              </div>
+              <div class="mb-4">
+                  <label class="block text-gray-700 mb-2" for="cctvCamera">CCTV Camera:</label>
+                  <input type="number" id="cctvCamera" class="w-full px-3 py-2 border rounded" min="0" value="0" placeholder="Specify quantity" />
+              </div>
+              <div class="mb-4">
+                  <label class="block text-gray-700 mb-2" for="phoneCharger">Phone Charger:</label>
+                  <input type="number" id="phoneCharger" class="w-full px-3 py-2 border rounded" min="0" value="0" placeholder="Specify quantity" />
+              </div>
+              <div class="mb-4">
+                  <label class="block text-gray-700 mb-2" for="washingMachine">Washing Machine:</label>
+                  <input type="number" id="washingMachine" class="w-full px-3 py-2 border rounded" min="0" value="0" placeholder="Specify quantity" />
+              </div>
+              <div class="mb-4">
+                  <label class="block text-gray-700 mb-2" for="cableDecoder">Cable Decoder:</label>
+                  <input type="number" id="cableDecoder" class="w-full px-3 py-2 border rounded" min="0" value="0" placeholder="Specify quantity" />
+              </div>
+              <div class="mb-4">
+                  <label class="block text-gray-700 mb-2" for="ceilingFan">Ceiling Fan:</label>
+                  <input type="number" id="ceilingFan" class="w-full px-3 py-2 border rounded" min="0" value="0" placeholder="Specify quantity" />
+              </div>
           </div>
 
           <div class="mb-4">
-            <label class="block text-gray-700 mb-2" for="lightBulb"
-              >Light Bulb:</label
-            >
-            <input
-              type="number"
-              id="lightBulb"
-              class="w-1/2 px-3 py-2 border rounded"
-              min="0"
-              value="0"
-              placeholder="Or specify quantity"
-            />
+              <button type="button" onclick="calculateLoadAndInverter()" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                  Calculate
+              </button>
           </div>
-          <div class="mb-4">
-            <label class="block text-gray-700 mb-2" for="standingFan"
-              >Standing Fan:</label
-            >
-            <input
-              type="number"
-              id="standingFan"
-              class="w-1/2 px-3 py-2 border rounded"
-              min="0"
-              value="0"
-              placeholder="Or specify quantity"
-            />
-          </div>
-        </div>
-
-        <div class="grid grid-cols-3 gap-4">
-          <div class="mb-4">
-            <label class="block text-gray-700 mb-2" for="waterPump"
-              >Water Pump</label
-            >
-            <input type="number" id="waterPump" class="w-1/2 px-3 py-2 border
-            rounded min="0" value="0" placeholder="Or specify quantity" />
-          </div>
-          <div class="mb-4">
-            <label class="block text-gray-700 mb-2" for="freezer"
-              >Freezer:</label
-            >
-            <input
-              type="number"
-              id="freezer"
-              class="w-1/2 px-3 py-2 border rounded"
-              min="0"
-              value="0"
-              placeholder="Or specify quantity"
-            />
-          </div>
-          <div class="mb-4">
-            <label class="block text-gray-700 mb-2" for="refrigerator"
-              >Refrigerator</label
-            >
-            <input
-              type="number"
-              id="refrigerator"
-              class="w-1/2 px-3 py-2 border rounded"
-              min="0"
-              value="0"
-              placeholder="Or specify quantity"
-            />
-          </div>
-          <div class="mb-4">
-            <label class="block text-gray-700 mb-2" for="inverterAC"
-              >Inverter AC</label
-            >
-            <input
-              type="number"
-              id="inverterAC"
-              class="w-1/2 px-3 py-2 border rounded"
-              min="0"
-              value="0"
-              placeholder="Or specify quantity"
-            />
-          </div>
-          <div class="mb-4">
-            <label class="block text-gray-700 mb-2" for="mediumIndustrialFan"
-              >Medium Industrial Fan:</label
-            >
-            <input
-              type="number"
-              id="mediumIndustrialFan"
-              class="w-1/2 px-3 py-2 border rounded"
-              min="0"
-              value="0"
-              placeholder="Or specify quantity"
-            />
-          </div>
-        </div>
-
-        <div class="grid grid-cols-3 gap-4">
-          <div class="mb-4">
-            <label class="block text-gray-700 mb-2" for="computerSet"
-              >Computer Set:</label
-            >
-            <input
-              type="number"
-              id="computerSet"
-              class="w-1/2 px-3 py-2 border rounded"
-              min="0"
-              value="0"
-              placeholder="Or specify quantity"
-            />
-          </div>
-          <div class="mb-4">
-            <label class="block text-gray-700 mb-2" for="cctvCamera"
-              >CCTV Camera:</label
-            >
-            <input
-              type="number"
-              id="cctvCamera"
-              class="w-1/2 px-3 py-2 border rounded"
-              min="0"
-              value="0"
-              placeholder="Or specify quantity"
-            />
-          </div>
-          <div class="mb-4">
-            <label class="block text-gray-700 mb-2" for="phoneCharger"
-              >Phone Charger:</label
-            >
-            <input
-              type="number"
-              id="phoneCharger"
-              class="w-1/2 px-3 py-2 border rounded"
-              min="0"
-              value="0"
-              placeholder="Or specify quantity"
-            />
-          </div>
-          <div class="mb-4">
-            <label class="block text-gray-700 mb-2" for="washingMachine"
-              >Washing Machine:</label
-            >
-            <input
-              type="number"
-              id="washingMachine"
-              class="w-1/2 px-3 py-2 border rounded"
-              min="0"
-              value="0"
-              placeholder="Or specify quantity"
-            />
-          </div>
-          <div class="mb-4">
-            <label class="block text-gray-700 mb-2" for="cableDecoder"
-              >Cable Decoder:</label
-            >
-            <input
-              type="number"
-              id="cableDecoder"
-              class="w-1/2 px-3 py-2 border rounded"
-              min="0"
-              value="0"
-              placeholder="Or specify quantity"
-            />
-          </div>
-          <div class="mb-4">
-            <label class="block text-gray-700 mb-2" for="ceilingFan"
-              >Ceiling Fan:</label
-            >
-            <input
-              type="number"
-              id="ceilingFan"
-              class="w-1/2 px-3 py-2 border rounded"
-              min="0"
-              value="0"
-              placeholder="Or specify quantity"
-            />
-          </div>
-        </div>
-
-        <div class="mb-4 col-span-3">
-          <button
-            type="button"
-            onclick="calculateLoadAndInverter()"
-            class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          >
-            Calculate
-          </button>
-        </div>
       </form>
 
       <div id="result" class="hidden mt-4 bg-gray-200 p-4 rounded-lg">
-        <h2 class="font-bold mb-4">Result:</h2>
-        <p>
-          Maximum Load: <span class="font-bold text-right" id="maxLoad"></span>
-        </p>
-        <p>
-          Suggested Inverter:
-          <span class="font-bold text-right" id="suggestedInverter"></span>
-        </p>
+          <h2 class="font-bold mb-4">Result:</h2>
+          <p>Maximum Load: <span class="font-bold text-right" id="maxLoad"></span></p>
+          <p>Suggested Inverter: <span class="font-bold text-right" id="suggestedInverter"></span></p>
       </div>
-    </section>
+  </section>
 
-    <footer class="py-8 border-t text-base border-gray-400 text-center flex flex-col sm:flex-wrap text-white bg-black">  
+  <footer class="py-8 border-t text-base border-gray-400 text-center flex flex-col sm:flex-wrap text-white bg-black">
       <div class="nav w-full font-mono flex flex-col px-4 items-center justify-center">
-      <a href="index.html">
-      Home
-    </a>
-    <a href="about.html">
-      About Us
-    </a>
-    <a href="store.html">Shop Online</a>
-    <a href="quote.html">
-      Get Quotation
-    </a>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="store.html">Shop Online</a>
+          <a href="quote.html">Get Quotation</a>
       </div>     
-        <div class="socials w-full px-4 mt-4 items-center">
-              <a href="https://api.whatsapp.com/send?phone=2348120691079&text=Hi.%20I%27m%20interested%20in%20getting%20____" class="mx-2">
+      <div class="socials w-full px-4 mt-4 items-center">
+          <a href="https://api.whatsapp.com/send?phone=2348120691079&text=Hi.%20I'm%20interested%20in%20getting%20____" class="mx-2">
               <i class="fa fa-whatsapp text-green-300 fa-2x lg:fa-3x" aria-hidden="true"></i>
-              </a>
-              <a href="https://facebook.com/breeltd" class="mx-2">
-                <i class="fa fa-facebook text-blue-400 fa-2x lg:fa-3x" aria-hidden="true"></i>
-              </a>
-              <a href="https://instagram.com/bree.ltd" class="mx-2">
-               <i class="fa fa-instagram fa-2x lg:fa-3x text-pink-300" aria-hidden="true"></i>
-              </a>
-           
-            </div>
-            <hr  class="mt-4 bg-neutral-900" />
+          </a>
+          <a href="https://facebook.com/breeltd" class="mx-2">
+              <i class="fa fa-facebook text-blue-400 fa-2x lg:fa-3x" aria-hidden="true"></i>
+          </a>
+          <a href="https://instagram.com/bree.ltd" class="mx-2">
+              <i class="fa fa-instagram fa-2x lg:fa-3x text-pink-300" aria-hidden="true"></i>
+          </a>
+      </div>
+      <hr class="mt-4 bg-neutral-900" />
+      <div class="contact w-full px-4 mt-4 text-sm">
+          <p>Phone: 08120691079</p>
+          <p>Email: breeltd@gmail.com</p>
+          <p>Address: 453 Ikwerre Road opp F.C.M Bank Rumuokuta, Port Harcourt, Rivers Nigeria</p>
+      </div>
+      <p class="mt-4 text-sm">© 2024 Blizz Renewable Energy Empire. All rights reserved</p>
+  </footer>
 
-            <div class="contact w-full px-4 mt-4">                    
-              <p class="text-sm">Phone: 08120691079</p>
-              <p class="text-sm">Email: breeltd@gmail.com
-              </p>
-              <p class="text-sm">Address: 453 Ikwerre Road opp F.C.M Bank Rumuokuta, Port Harcourt, Rivers Nigeria </p>
+  <script src="quote.js"></script>
+</body>
 
-            </div>
-            <p class="mt-4 font-sm font-serif"> 2024. Blizz Renewable Energy Empire. All rights reserved </p>
-
-</footer>  
-
- <script src="quote.js"></script>
-
-  </body>
 </html>
