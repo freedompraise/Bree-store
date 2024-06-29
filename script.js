@@ -7,7 +7,6 @@ function openOrderForm(productName, productImageSrc) {
   orderFormSection.scrollIntoView({ behavior: "smooth" });
 }
 
-
 function scrollToInstallmentalPlan() {
   const installmentalPaymentSection = document.getElementById(
     "installmentalPaymentSection"
@@ -16,7 +15,6 @@ function scrollToInstallmentalPlan() {
   installmentalPaymentSection.scrollIntoView({ behavior: "smooth" });
 }
 
-
 function openProductImagePopup(imageSrc) {
   const popup = document.getElementById("productImagePopup");
   const image = document.getElementById("popupImage");
@@ -24,11 +22,9 @@ function openProductImagePopup(imageSrc) {
   popup.style.display = "block";
 }
 
-
 function closeProductImagePopup() {
   document.getElementById("productImagePopup").style.display = "none";
 }
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const orderButtons = document.querySelectorAll(".order-button");
@@ -61,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-
   // to open the product image popup when the order cover is clicked
   orderCovers.forEach(function (cover) {
     cover.addEventListener("click", function () {
@@ -70,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-// capture order and send to whatsapp
+  // capture order and send to whatsapp
   const orderForm = document.getElementById("orderForm");
   orderForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -105,73 +100,78 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// mobile menu
+const mobileMenuButton = document.querySelector(".mobile-menu-button");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+mobileMenuButton.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
 
 // slides
 let slideIndex = 1;
 showSlide(slideIndex);
 // change slide with the prev/next button
 function moveSlide(moveStep) {
-  showSlide(slideIndex += moveStep);
-  }
+  showSlide((slideIndex += moveStep));
+}
 
 function showSlide(n) {
   let i;
   const slides = document.getElementsByClassName("slide");
-  const dots = document.getElementsByClassName('dot');
-            
-  if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-      // hide all slides
-      for (i = 0; i < slides.length; i++) {
-        slides[i].classList.add('hidden');
-        }
-         // remove the active class from all dots
-      for (i = 0; i < dots.length; i++) {
-        dots[i].classList.remove('active');
-      }
-      
-      slides[slideIndex - 1].classList.remove('hidden');
-      slides[slideIndex - 1].style.animation = 'slideRight 1s forwards';
+  const dots = document.getElementsByClassName("dot");
 
-    };
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  // hide all slides
+  for (i = 0; i < slides.length; i++) {
+    slides[i].classList.add("hidden");
+  }
+  // remove the active class from all dots
+  for (i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("active");
+  }
 
-   setInterval(() => {
-    moveSlide(1);
-    }, 5000);
+  slides[slideIndex - 1].classList.remove("hidden");
+  slides[slideIndex - 1].style.animation = "slideRight 1s forwards";
+}
 
+setInterval(() => {
+  moveSlide(1);
+}, 5000);
 
-  
-  // toggle visibility of paragraphs when clicking on Font Awesome icons
-  document.addEventListener('DOMContentLoaded', function() {
-    const icons = document.querySelectorAll('.fa-plus-circle');
-    
-    icons.forEach(icon => {
-        icon.addEventListener('click', function() {
-            const paragraph = this.parentElement.nextElementSibling;
-            paragraph.classList.toggle('hidden');
-            this.classList.toggle('fa-minus-circle');
-            
-        });
+// toggle visibility of paragraphs when clicking on Font Awesome icons
+document.addEventListener("DOMContentLoaded", function () {
+  const icons = document.querySelectorAll(".fa-plus-circle");
+
+  icons.forEach((icon) => {
+    icon.addEventListener("click", function () {
+      const paragraph = this.parentElement.nextElementSibling;
+      paragraph.classList.toggle("hidden");
+      this.classList.toggle("fa-minus-circle");
     });
+  });
 });
 
+const contactForm = document.getElementById("contactForm");
+contactForm.addEventListener("submit", (event) => {
+  event.preventDefault(); // Prevent default form submission
+  const name = document.getElementById("name").value;
+  const number = document.getElementById("number").value;
+  const subject = document.getElementById("subject").value;
+  const message = document.getElementById("message").value;
 
-const contactForm = document.getElementById('contactForm');
-  contactForm.addEventListener('submit', (event) => {
-    event.preventDefault(); // Prevent default form submission
-    const name = document.getElementById('name').value;
-    const number = document.getElementById('number').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
-
-    const contactMessage = `Contact Details:
+  const contactMessage = `Contact Details:
       Name: ${name}
       Phone Number: ${number}
       Subject: ${subject}
       Message: ${message}`;
 
-      const encodedMessage = encodeURIComponent(contactMessage);
-      const whatsappURL = `https://wa.me/2348120691079/?text=${encodedMessage}`;
-      window.location.href = whatsappURL;
-  }
-  );
+  const encodedMessage = encodeURIComponent(contactMessage);
+  const whatsappURL = `https://wa.me/2348120691079/?text=${encodedMessage}`;
+  window.location.href = whatsappURL;
+});
