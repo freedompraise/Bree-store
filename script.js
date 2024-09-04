@@ -65,7 +65,7 @@ setInterval(() => {
 
 const contactForm = document.getElementById("contactForm");
 contactForm.addEventListener("submit", (event) => {
-  event.preventDefault(); // Prevent default form submission
+  event.preventDefault(); //
   const name = document.getElementById("name").value;
   const number = document.getElementById("number").value;
   const subject = document.getElementById("subject").value;
