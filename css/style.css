@@ -9608,11 +9608,6 @@ h4, h5, h6 {
   opacity: 1;
 }
 
-.bg-gallery {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/gallery.jpg), no-repeat center center;
-  background-size: cover;
-}
-
 .gallery-carousel .owl-nav,
 .testimonial-carousel .owl-nav {
   position: absolute;
